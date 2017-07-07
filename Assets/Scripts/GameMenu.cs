@@ -27,5 +27,11 @@ public class GameMenu : MonoBehaviour
 				_gameManager = Instantiate (gameManager)as GameManager;
 			}
 		}
+        if(GUI.Button(new Rect(10, 60, 200, 50), "结束游戏"))
+        {
+
+            Application.Quit();
+            
+        }
 	}
 }

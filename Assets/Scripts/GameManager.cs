@@ -118,6 +118,11 @@ public class GameManager : MonoBehaviour
 
 		if (Physics.Raycast (ray, out hit, mask)) {
 			music.playClickEffect ();
+			for (int i = 1; i < _tiles.Count; i++){
+				if (_tiles [i].type && _tiles [i] != null && _tiles[i].isActived){
+					_tiles[i].setTileTexture(0);
+				}
+			}
 			if (tileA == null) {
 				tileA = hit.transform.GetComponent <Tile > ();
 				tileA.setTileTexture (1);
